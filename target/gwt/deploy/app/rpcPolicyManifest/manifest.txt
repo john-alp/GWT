@@ -1,0 +1,3 @@
+# Module app
+# RPC service class, partial path of RPC policy file
+com.demiurg.client.GreetingService, FF650C6527C84134FCCF6E8A02B1881A.gwt.rpc
