@@ -1,2 +1,0 @@
-serviceClass: com.demiurg.client.GreetingService
-path: FF650C6527C84134FCCF6E8A02B1881A.gwt.rpc
