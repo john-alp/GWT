@@ -38,6 +38,12 @@ public class app implements EntryPoint {
    * This is the entry point method.
    */
   public void onModuleLoad() {
+    final Button sendButton2 = new Button("Wer");
+    final TextBox nameField2 = new TextBox();
+    nameField2.setText("demiurg");
+
+
+
     final Button sendButton = new Button("Send");
     final TextBox nameField = new TextBox();
     nameField.setText("GWT User");
@@ -60,7 +66,7 @@ public class app implements EntryPoint {
     final DialogBox dialogBox = new DialogBox();
     dialogBox.setText("Remote Procedure Call");
     dialogBox.setAnimationEnabled(true);
-    final Button closeButton = new Button("Close");
+    final Button closeButton = new Button("Close2");
     // We can set the id of a widget by accessing its Element
     closeButton.getElement().setId("closeButton");
     final Label textToServerLabel = new Label();
@@ -90,6 +96,7 @@ public class app implements EntryPoint {
        * Fired when the user clicks on the sendButton.
        */
       public void onClick(ClickEvent event) {
+        System.out.println("onClick");
         sendNameToServer();
       }
 
@@ -97,6 +104,7 @@ public class app implements EntryPoint {
        * Fired when the user types in the nameField.
        */
       public void onKeyUp(KeyUpEvent event) {
+        System.out.println("onKeyUp");
         if (event.getNativeKeyCode() == KeyCodes.KEY_ENTER) {
           sendNameToServer();
         }
@@ -107,6 +115,7 @@ public class app implements EntryPoint {
        */
       private void sendNameToServer() {
         // First, we validate the input.
+        System.out.println("sendName");
         errorLabel.setText("");
         String textToServer = nameField.getText();
         if (!FieldVerifier.isValidName(textToServer)) {

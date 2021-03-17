@@ -5,17 +5,31 @@
          version="2.5"
          xmlns="http://java.sun.com/xml/ns/javaee">
 
+
+  <display-name>TestServlets</display-name>
+
   <!-- Servlets -->
   <servlet>
     <servlet-name>greetServlet</servlet-name>
     <servlet-class>com.demiurg.server.GreetingServiceImpl</servlet-class>
   </servlet>
-  
+
   <servlet-mapping>
     <servlet-name>greetServlet</servlet-name>
     <url-pattern>/app/greet</url-pattern>
   </servlet-mapping>
-  
+
+
+  <servlet>
+    <servlet-name>myServlet</servlet-name>
+    <servlet-class>com.demiurg.server.MyServletImpl</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>myServlet</servlet-name>
+    <url-pattern>/app/greet/welcome</url-pattern>
+  </servlet-mapping>
+
   <!-- Default page to serve -->
   <welcome-file-list>
     <welcome-file>app.html</welcome-file>
